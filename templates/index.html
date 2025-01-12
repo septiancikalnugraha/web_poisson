@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulasi Distribusi Poisson</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Simulasi Distribusi Poisson</h1>
+        <p class="description">
+            Hitung probabilitas suatu peristiwa berdasarkan rata-rata kejadian (\(\lambda\)) 
+            menggunakan distribusi Poisson.
+        </p>
+
+        <div class="case-study">
+            <h2>📊 Studi Kasus</h2>
+            <p>
+                Sebuah kafe ingin mengetahui probabilitas 7 pelanggan datang dalam satu jam, 
+                dengan rata-rata 5 pelanggan per jam (\(\lambda = 5\)).
+            </p>
+            <p><strong>Pertanyaan:</strong></p>
+            <p>
+                Berapa probabilitas \(P(X = k)\), dengan \(k = 7\) dan rata-rata kejadian (\(\lambda\)) 
+                sebesar \(5\)?
+            </p>
+            <p><strong>Rumus Distribusi Poisson:</strong></p>
+            <p class="mathjax-element">
+                \[
+                P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}
+                \]
+            </p>
+        </div>
+
+        <form id="poisson-form">
+            <label for="lambda">Rata-rata peristiwa (\(\lambda\)):</label>
+            <input type="number" id="lambda" name="lambda" step="0.01" required>
+
+            <label for="k">Jumlah peristiwa (\(k\)):</label>
+            <input type="number" id="k" name="k" required>
+
+            <button type="submit">Hitung</button>
+        </form>
+
+        <div id="result"></div>
+        <div id="steps"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

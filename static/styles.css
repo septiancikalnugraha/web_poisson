@@ -1,0 +1,138 @@
+/* Latar belakang umum */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #d9e6f2, #f0f4f8);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Kontainer utama */
+.container {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    max-width: 90%;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Judul utama */
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+/* Deskripsi tambahan */
+.description {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Studi kasus */
+.case-study {
+    background: #f7fbff;
+    border-left: 5px solid #007BFF;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.case-study h2 {
+    font-size: 1.2em;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+.case-study p {
+    font-size: 0.95em;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Label */
+label {
+    font-size: 1em;
+    color: #555;
+    display: block;
+    margin: 15px 0 8px;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Input dan tombol */
+input, button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+/* Fokus input */
+input:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Tombol */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.02);
+}
+
+button:active {
+    background-color: #004494;
+}
+
+/* Hasil perhitungan */
+#result {
+    margin-top: 15px;
+    font-size: 1.2em;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Langkah-langkah */
+#steps {
+    text-align: left;
+    font-size: 0.9em;
+    margin-top: 20px;
+    color: #555;
+    background: #f0f4f8;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    line-height: 1.5;
+}
